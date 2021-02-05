@@ -1,9 +1,12 @@
 # Strapi application
 
-A quick description of your strapi application
+First of all, install packages
+
+```
+yarn install
+```
 
 # Available commands in your project:
-
 
 ```
 yarn develop
