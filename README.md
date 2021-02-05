@@ -5,18 +5,28 @@ A quick description of your strapi application
 # Available commands in your project:
 
 
-```yarn develop```
+```
+yarn develop
+```
   Start Strapi in watch mode.
 
-```yarn start```
+```
+yarn start
+```
   Start Strapi without watch mode.
 
-```yarn build```
+```
+yarn build
+```
   Build Strapi admin panel.
 
-```yarn strapi```
+```
+yarn strapi
+```
   Display all available commands.
 
 You can start by doing:
 
-```yarn develop```
+```
+yarn develop
+```
