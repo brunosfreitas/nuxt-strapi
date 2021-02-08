@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero_Title": {
+      "type": "string"
+    },
+    "Hero_Subtitle": {
+      "type": "string"
+    },
+    "Hero_Button_CTA": {
+      "type": "string"
+    },
+    "Hero_Image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Hero_Button_Color": {
+      "type": "enumeration",
+      "enum": [
+        "yellow",
+        "red",
+        "blue"
+      ]
+    }
+  }
+}
