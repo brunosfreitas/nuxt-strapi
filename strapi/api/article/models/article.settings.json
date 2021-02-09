@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "likes": {
+      "type": "integer"
+    },
+    "publish_at": {
+      "type": "date"
+    },
+    "users_permissions_permission": {
+      "plugin": "users-permissions",
+      "model": "permission"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
