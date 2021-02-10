@@ -23,12 +23,19 @@
     "publish_at": {
       "type": "date"
     },
-    "users_permissions_permission": {
-      "plugin": "users-permissions",
-      "model": "permission"
-    },
     "category": {
       "type": "string"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

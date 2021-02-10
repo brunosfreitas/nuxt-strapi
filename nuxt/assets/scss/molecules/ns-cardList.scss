@@ -1,0 +1,11 @@
+.ns-cardList {
+    width: 100%;
+    max-width: $max-desktop-width;
+    margin: auto;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+}

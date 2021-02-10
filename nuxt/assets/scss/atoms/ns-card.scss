@@ -1,0 +1,20 @@
+.ns-card {
+    background-color: $color_blue;
+    border: 2px solid $color_black;
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin: 25px;
+    }
+
+    &__title {
+        margin-left: 27px;
+        text-align: left;
+        color: $color_white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
