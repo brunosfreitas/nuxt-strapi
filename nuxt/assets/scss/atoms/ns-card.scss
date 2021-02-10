@@ -1,6 +1,9 @@
 .ns-card {
     background-color: $color_blue;
-    border: 2px solid $color_black;
+    border: 1px solid $color_black;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 0px 4px #000000; 
+    box-shadow: 0px 1px 0px 4px #000000;
 
     &__link {
         text-decoration: none;
