@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_pages",
+  "collectionName": "heroes",
   "info": {
-    "name": "Hero",
-    "description": ""
+    "name": "Heroes"
   },
   "options": {
     "increments": true,
@@ -11,17 +10,25 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Hero_Title": {
+    "Title": {
       "type": "string"
     },
-    "Hero_Subtitle": {
+    "Subtitle": {
       "type": "string"
     },
-    "Hero_Button_CTA": {
+    "button_label": {
       "type": "string"
     },
-    "Hero_Image": {
-      "collection": "file",
+    "button_color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "green",
+        "blue"
+      ]
+    },
+    "image_src": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -31,13 +38,12 @@
       "plugin": "upload",
       "required": false
     },
-    "Hero_Button_Color": {
-      "type": "enumeration",
-      "enum": [
-        "yellow",
-        "red",
-        "blue"
-      ]
+    "img_alt": {
+      "type": "string"
+    },
+    "users_permissions_permission": {
+      "plugin": "users-permissions",
+      "model": "permission"
     }
   }
 }

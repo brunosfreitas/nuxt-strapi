@@ -1,0 +1,21 @@
+.ns-article{
+    margin: 50px; 
+
+    &__backButton {
+        text-decoration: none;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: block;
+
+        &:before {
+            content: "< "
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-style: bold;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 50px;
+    }
+}
