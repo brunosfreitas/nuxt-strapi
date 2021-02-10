@@ -5,7 +5,11 @@
             {{ error }}
         </div>
         <h1 class="ns-article__title">{{article.title}}</h1>
-        <p class="ns-article__content">{{article.content}}</p>
+        <p v-html="article.content" class="ns-article__content"></p>
+        <div class="ns-article__informs">
+        <p>{{ article.publish_at }}</p>
+        <p>{{ article.likes }}</p>
+        </div>
     </article>
 </template>
 
@@ -33,3 +37,30 @@ export default {
     }
   }
 </script>
+
+<style>
+
+.ns-article {
+    font-family: 'Arial', sans-serif;
+}
+
+.ns-article__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ns-article__content {
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+}
+
+.ns-article__informs {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    width: 25%;
+    color: black;
+    font-size: 20px;
+}
+
+</style>
