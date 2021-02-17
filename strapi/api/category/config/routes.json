@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/category",
+      "handler": "category.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/category",
+      "handler": "category.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/category",
+      "handler": "category.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

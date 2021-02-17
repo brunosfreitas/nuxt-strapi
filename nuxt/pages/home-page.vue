@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import nsButton from '../components/atoms/ns-button.vue'
-import nsHero from '../components/molecules/ns-hero.vue'
 
 export default {
   components: { nsButton, nsHero },

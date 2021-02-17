@@ -1,5 +1,5 @@
 <template>
-<NuxtLink to="/home-page" class="ns-button">{{ label }}</NuxtLink>
+  <NuxtLink to="/home-page" class="ns-button">{{ label }}</NuxtLink>
 </template>
 
 <script>

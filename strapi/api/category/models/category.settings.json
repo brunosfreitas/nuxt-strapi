@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "food",
+        "drink"
+      ]
+    }
+  }
+}
