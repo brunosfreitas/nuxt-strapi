@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "Contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    },
+    "second_title": {
+      "type": "string"
+    },
+    "contact_us": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact-details"
+    },
+    "employees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "employees.employee"
+    }
+  }
+}

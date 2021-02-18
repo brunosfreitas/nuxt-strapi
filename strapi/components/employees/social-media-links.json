@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_employees_social_media_links",
+  "info": {
+    "name": "Social Media Links",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

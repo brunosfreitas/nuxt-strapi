@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_employees_employees",
+  "info": {
+    "name": "Employee",
+    "icon": "users",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "employee_name": {
+      "type": "string"
+    },
+    "employee_position": {
+      "type": "string"
+    },
+    "social_media_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "employees.social-media-links"
+    }
+  }
+}
