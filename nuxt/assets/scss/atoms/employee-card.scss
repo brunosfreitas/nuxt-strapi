@@ -1,0 +1,25 @@
+.employee-card {
+  &__name {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: .40px;
+  }
+
+  &__position {
+    margin-bottom: 15px;
+  }
+
+  &__illustration {
+    width: 100%;
+    height: auto;
+  }
+
+  &__social-links {
+    li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+}
