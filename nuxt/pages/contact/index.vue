@@ -7,9 +7,9 @@
         <a :href="contact.button_link" class="contact__button button">{{ contact.button_label }}</a>
 
         <h2 class="contact__title">{{ contact.contact_title }}</h2>
-        <ul class="contact__contact-items">
-          <li v-for="field in contact.contact_us" :key="field.id">
-            <i>
+        <ul>
+          <li class="contact__contact-item" v-for="field in contact.contact_us" :key="field.id">
+            <i class="contact__contact-icon" >
               <img :src="strapiSrc(field.icon.url)" :alt="field.icon.alternativeText">
             </i>
             <a :href="field.contact_item_url" target="_blank">{{ field.contact_item }}</a>

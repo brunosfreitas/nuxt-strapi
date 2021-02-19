@@ -45,21 +45,19 @@
     margin-bottom: 70px;
   }
 
-  &__contact-items {
-    li {
-      display: flex;
-      line-height: 1.5;
-      letter-spacing: .40px;
-      margin-bottom: 5px;
+  &__contact-item {
+    display: flex;
+    line-height: 1.5;
+    letter-spacing: .40px;
+    margin-bottom: 5px;
 
-      i {
-        vertical-align: middle;
-        margin-right: 15px;
-      }
-
-      &:nth-child(n+2) a {
-        text-decoration: none;
-      }
+    &:nth-child(n+2) a {
+      text-decoration: none;
     }
+  }
+
+  &__contact-icon {
+    vertical-align: middle;
+    margin-right: 15px;
   }
 }
