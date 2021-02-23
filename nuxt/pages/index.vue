@@ -1,11 +1,16 @@
 <template>
   <div class="container">
-    <ns-card-list></ns-card-list>
+    <ns-card-list :articles="articles"></ns-card-list>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData ({$http}) {
+      const articles = await $http.$get(`http://localhost:1337/articles`);
+      return { articles }
+  }
+}
 </script>
 
 <style>

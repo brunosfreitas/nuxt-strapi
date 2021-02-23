@@ -11,19 +11,16 @@
 
 <script>
 export default {
-  name: 'ns-hero',
   data () {
     return {
-      articles: [],
       error: null
     }
   },
-  async mounted () {
-    try {
-      this.articles = await this.$strapi.$articles.find()
-    } catch (error) {
-      this.error = error
+  props: {
+    articles: {
+      type: Array,
+      default: []
     }
-  }
+  },  
 }
 </script>
