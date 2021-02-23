@@ -22,7 +22,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [ 
+  css: [
     '~/assets/scss/main.scss'
   ],
 
@@ -40,7 +40,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/strapi'],
   strapi: {
-    entities: ['heroes', 'articles'],
+    entities: ['heroes', 'articles', 'contact'],
     url: 'http://localhost:1337'
   },
 

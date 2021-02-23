@@ -1,0 +1,63 @@
+.contact {
+  padding: 80px 0px;
+  background-color: $color_yellow;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px 30px;
+
+    .contact__column {
+      &:first-child {
+        max-width: 70%;
+      }
+    }
+
+    @media (max-width: $mobile-min) {
+      display: inherit;
+
+      .contact__column {
+        &:first-child {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 45px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: $color_black;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .40px;
+    color: $color_blue_dark;
+  }
+
+  &__button {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  &__contact-item {
+    display: flex;
+    line-height: 1.5;
+    letter-spacing: .40px;
+    margin-bottom: 5px;
+
+    &:nth-child(n+2) a {
+      text-decoration: none;
+    }
+  }
+
+  &__contact-icon {
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+}

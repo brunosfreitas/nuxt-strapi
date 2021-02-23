@@ -1,0 +1,10 @@
+.employee-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px 30px;
+
+  @media (max-width: $mobile-max) {
+    margin-top: 70px;
+    grid-template-columns: 1fr;
+  }
+}

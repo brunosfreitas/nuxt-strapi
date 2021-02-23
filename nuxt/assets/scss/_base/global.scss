@@ -1,3 +1,35 @@
-* {
-    box-sizing: border-box;
+@import '../_base/responsive-breakpoints';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  color: $color_black;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
   }
+}
+
+::selection {
+  color: $color_white;
+  background: $color_gray;
+}
+
+.container {
+  max-width: $max-desktop-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}

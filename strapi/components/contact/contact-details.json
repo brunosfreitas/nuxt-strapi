@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_contact_contact_details",
+  "info": {
+    "name": "Contact Details",
+    "icon": "phone-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "contact_item": {
+      "type": "string"
+    },
+    "contact_item_url": {
+      "type": "string"
+    }
+  }
+}
