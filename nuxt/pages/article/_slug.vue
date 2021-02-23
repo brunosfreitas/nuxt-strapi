@@ -24,7 +24,7 @@ export default {
     async mounted () {
         try {
             let result = await this.$strapi.$articles.find({
-                _id: this.slug
+                slug: this.slug
             })
             this.article = result[0];
         } catch (error) {
@@ -32,10 +32,10 @@ export default {
         }
     },
     async asyncData({ params }) {
-      const slug = params.slug // When calling /abc the slug will be "abc"
-      return { slug }
+        const slug = params.slug // When calling /abc the slug will be "abc"
+        return { slug }
     }
-  }
+}
 </script>
 
 <style>
