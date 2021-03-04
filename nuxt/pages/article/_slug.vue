@@ -1,16 +1,21 @@
 <template>
-    <article class="ns-article">
-        <NuxtLink to="/" class="ns-article__backButton"> Back </NuxtLink>
+    <div class="container">
         <div v-if="error">
             {{ error }}
         </div>
-        <h1 class="ns-article__title">{{article.title}}</h1>
-        <p v-html="article.content" class="ns-article__content"></p>
-        <div class="ns-article__informs">
-        <p>{{ article.publish_at }}</p>
-        <p>{{ article.likes }}</p>
-        </div>
-    </article>
+
+        <article v-else class="ns-article">
+            <NuxtLink to="/" class="ns-article__backButton"> Back </NuxtLink>
+
+            <h1 class="ns-article__title">{{article.title}}</h1>
+            <p v-html="article.content" class="ns-article__content"></p>
+
+            <div class="ns-article__informs">
+                <p>{{ article.publish_at }}</p>
+                <p>{{ article.likes }}</p>
+            </div>
+        </article>
+    </div>
 </template>
 
 <script>
@@ -21,7 +26,7 @@ export default {
             error: null
         }
     },
-    async mounted () {
+    async fetch() {
         try {
             let result = await this.$strapi.$articles.find({
                 slug: this.slug
@@ -39,28 +44,4 @@ export default {
 </script>
 
 <style>
-
-.ns-article {
-    font-family: 'Arial', sans-serif;
-}
-
-.ns-article__title {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.ns-article__content {
-    font-size: 20px;
-    color: rgb(107, 106, 106);
-}
-
-.ns-article__informs {
-    display: flex;
-    padding-top: 20px;
-    justify-content: space-between;
-    width: 25%;
-    color: black;
-    font-size: 20px;
-}
-
 </style>

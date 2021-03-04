@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "headers",
+  "info": {
+    "name": "Header",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "header_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.header-links"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_url": {
+      "type": "string"
+    },
+    "cta_color": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "bluemarine"
+      ]
+    }
+  }
+}
