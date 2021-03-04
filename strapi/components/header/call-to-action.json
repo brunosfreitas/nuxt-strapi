@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_header_call_to_actions",
+  "info": {
+    "name": "call_to_action",
+    "icon": "external-link-alt"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

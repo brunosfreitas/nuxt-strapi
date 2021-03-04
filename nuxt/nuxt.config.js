@@ -40,7 +40,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/strapi'],
   strapi: {
-    entities: ['heroes', 'articles', 'contact'],
+    entities: ['heroes', 'articles', 'contact', 'home' ,'header'],
     url: 'http://localhost:1337'
   },
 

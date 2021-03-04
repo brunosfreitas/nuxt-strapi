@@ -40,6 +40,19 @@
     "slug": {
       "type": "string",
       "private": false
+    },
+    "background_color": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "gray",
+        "blue",
+        "bluemarine",
+        "pink",
+        "yellow",
+        "orange"
+      ],
+      "required": true
     }
   }
 }

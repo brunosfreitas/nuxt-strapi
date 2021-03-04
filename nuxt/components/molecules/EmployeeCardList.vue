@@ -3,6 +3,7 @@
     <div v-if="error">
       {{ error }}
     </div>
+
     <template v-else>
       <employee-card
         v-for="field in contact.employees"
@@ -25,7 +26,7 @@ export default {
       error: null
     }
   },
-  async mounted () {
+  async fetch() {
     try {
       this.contact = await this.$strapi.$contact.find()
     } catch (error) {

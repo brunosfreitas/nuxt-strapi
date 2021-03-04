@@ -1,8 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "categories",
+  "collectionName": "homes",
   "info": {
-    "name": "category"
+    "name": "Home",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,12 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "food",
-        "drink"
-      ]
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

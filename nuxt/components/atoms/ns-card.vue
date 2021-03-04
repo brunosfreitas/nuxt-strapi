@@ -1,7 +1,7 @@
 <template>
-    <article class="ns-card">
+    <article :class="['ns-card',`ns-card--${bgColor}`]">
         <NuxtLink :to="nuxtURL" class="ns-card__link">
-            <img class="ns-card__thumbnail" :alt="imgAlt" :src="strapiSrc">
+            <img class="ns-card__thumbnail" :alt="imgAlt" :src="getStrapiMedia(imgSrc)">
             <h2 class="ns-card__title">{{ title }}</h2>
         </NuxtLink>
     </article>
@@ -14,33 +14,36 @@ export default {
     name: "ns-card",
     props: {
         imgAlt: {
-            type: String, 
+            type: String,
             default: ""
         },
         imgSrc: {
-            type: String, 
+            type: String,
             default: ""
         },
         title: {
-            type: String, 
+            type: String,
             default: ""
         },
         link: {
             type: String,
             default: ""
+        },
+        bgColor: {
+            type: String,
+            default: ""
         }
     },
     computed: {
-        strapiSrc: function() {
-            return getStrapiMedia(this.imgSrc);
-        },
         nuxtURL: function() {
             return "/article/" + this.link;
         }
+    },
+    methods: {
+        getStrapiMedia
     }
 }
 </script>
 
 <style>
-
 </style>
