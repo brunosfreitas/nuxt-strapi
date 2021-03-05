@@ -1,0 +1,42 @@
+.article {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+.article__button {
+    padding: 20px 0 20px 15px;
+}
+
+.article__backButton {
+    text-decoration: none;
+    color: rgb(20, 20, 141);
+}
+
+.article__thumbnail {
+    width: 100%;
+    height: 100px;
+}
+
+.article__body {
+    padding: 0 15px 20px 15px;
+}
+
+.article__title {
+    padding-bottom: 25px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.article__content {
+    font-size: 20px;
+    color: rgb(107, 106, 106);
+}
+
+.article__informs {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    width: 25%;
+    color: black;
+    font-size: 20px;
+}

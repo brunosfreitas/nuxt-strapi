@@ -1,25 +1,43 @@
 <template>
-    <article class="ns-article">
-        <NuxtLink to="/" class="ns-article__backButton"> Back </NuxtLink>
+    <article class="article">
+        <div class="article__button">
+            <NuxtLink to="/" class="article__backButton"> Back </NuxtLink>
+        </div>
         <div v-if="error">
             {{ error }}
         </div>
-        <h1 class="ns-article__title">{{article.title}}</h1>
-        <p v-html="article.content" class="ns-article__content"></p>
-        <div class="ns-article__informs">
-        <p>{{ article.publish_at }}</p>
-        <p>{{ article.likes }}</p>
+        <div class="article__body">
+            <!-- <img class="article__thumbnail" alt="imgAlt" :src="imageSrc"> -->
+            <h1 class="article__title">{{article.title}}</h1>
+            <p v-html="article.content" class="article__content"></p>
+            <div class="article__informs">
+                <p>{{ article.publish_at }}</p>
+                <p>{{ article.likes }}</p>
+            </div>
         </div>
     </article>
 </template>
 
 <script>
+import { getStrapiMedia } from '../../utils/medias.js';
 export default {
     data () {
         return {
             article: [],
             error: null
         }
+    },
+    computed: {
+        imageSrc: function() {
+            if (this.article || this.article.thumbnail || this.article.thumbnail.url) {
+            console.log(this.article.thumbnail.url)
+                const img = this.article.thumbnail.url;
+                console.log(img)
+                // return getStrapiMedia(this.article.thumbnail.url);
+            }
+
+        }
+        
     },
     async mounted () {
         try {
@@ -39,28 +57,5 @@ export default {
 </script>
 
 <style>
-
-.ns-article {
-    font-family: 'Arial', sans-serif;
-}
-
-.ns-article__title {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.ns-article__content {
-    font-size: 20px;
-    color: rgb(107, 106, 106);
-}
-
-.ns-article__informs {
-    display: flex;
-    padding-top: 20px;
-    justify-content: space-between;
-    width: 25%;
-    color: black;
-    font-size: 20px;
-}
 
 </style>
