@@ -1,9 +1,46 @@
 .ns-cardList {
-    width: 100%;
+  width: 100%;
 
-    &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 30px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__search {
+    display: block;
+    width: 50%;
+    height: 52px;
+    padding: 5px 20px;
+    margin: 0 auto 60px;
+    font-size: 18px;
+    outline: 0;
+    background-image: url('../img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 97%;
+    border-image-source: url('../img/input-mask.png');
+    border-image-slice: 21;
+    border-image-width: 17px 15px;
+    border-image-outset: 1;
+    color: $color_black;
+
+    &::placeholder {
+      color: $color_black;
     }
+  }
+
+  &__message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-max) {
+    &__search {
+      width: 85%;
+      margin: 0 auto 30px;
+    }
+  }
 }

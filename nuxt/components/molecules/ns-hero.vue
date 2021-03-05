@@ -20,7 +20,7 @@ export default {
       error: null
     }
   },
-  async mounted () {
+  async fetch() {
     try {
       this.articles = await this.$strapi.$articles.find()
     } catch (error) {

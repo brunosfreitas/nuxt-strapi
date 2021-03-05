@@ -1,23 +1,67 @@
 .ns-card {
-    background-color: $color_blue;
-    border: 1px solid $color_black;
-    border-radius: 8px;
-    -webkit-box-shadow: 0px 1px 0px 4px #000000; 
-    box-shadow: 0px 1px 0px 4px #000000;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid transparent;
+  border-image-slice: 92;
+  border-image-width: 82px;
+  margin: 15px;
+  flex: 1;
 
-    &__link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        margin: 25px;
-    }
+  &--white {
+    border-image-source: url('../img/card-mask-white.png');
+  }
 
-    &__title {
-        margin-left: 27px;
-        text-align: left;
-        color: $color_white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        line-height: 20px;
+  &--gray {
+    border-image-source: url('../img/card-mask-gray.png');
+  }
+
+  &--blue {
+    border-image-source: url('../img/card-mask-blue.png');
+
+    .ns-card__title {
+      color: $color_white;
     }
+  }
+
+  &--bluemarine {
+    border-image-source: url('../img/card-mask-blue-marine.png');
+
+    .ns-card__title {
+      color: $color_white;
+    }
+  }
+
+  &--pink {
+    border-image-source: url('../img/card-mask-pink.png');
+  }
+
+  &--yellow {
+    border-image-source: url('../img/card-mask-yellow.png');
+  }
+
+  &--orange {
+    border-image-source: url('../img/card-mask-orange.png');
+
+    .ns-card__title {
+      color: $color_white;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 27px;
+    text-align: left;
+    color: $color_black;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: .5px;
+  }
 }

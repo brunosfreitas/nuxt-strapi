@@ -1,21 +1,21 @@
 <template>
-    <article class="article">
-        <div class="article__button">
-            <NuxtLink to="/" class="article__backButton"> Back </NuxtLink>
-        </div>
+    <div class="container">
         <div v-if="error">
             {{ error }}
         </div>
-        <div class="article__body">
-            <!-- <img class="article__thumbnail" alt="imgAlt" :src="imageSrc"> -->
-            <h1 class="article__title">{{article.title}}</h1>
-            <p v-html="article.content" class="article__content"></p>
-            <div class="article__informs">
+
+        <article v-else class="ns-article">
+            <NuxtLink to="/" class="ns-article__backButton"> Back </NuxtLink>
+
+            <h1 class="ns-article__title">{{article.title}}</h1>
+            <p v-html="article.content" class="ns-article__content"></p>
+
+            <div class="ns-article__informs">
                 <p>{{ article.publish_at }}</p>
                 <p>{{ article.likes }}</p>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
 </template>
 
 <script>
@@ -57,5 +57,4 @@ export default {
 </script>
 
 <style>
-
 </style>

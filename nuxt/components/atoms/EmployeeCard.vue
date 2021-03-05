@@ -1,14 +1,14 @@
 <template>
     <div class="employee-card">
         <div class="employee-card__item">
-            <img class="employee-card__illustration" :src="strapiSrc(imgSrc)" :alt="imgAlt">
+            <img class="employee-card__illustration" :src="getStrapiMedia(imgSrc)" :alt="imgAlt">
             <p class="employee-card__name">{{ name }}</p>
             <p class="employee-card__position">{{ position }}</p>
 
             <ul class="employee-card__social-links">
                 <li v-for="item in socialMediaLinks" :key="item.id">
                     <a :href="item.url">
-                        <img :src="strapiSrc(item.icon.url)" :alt="item.icon.alternativeText">
+                        <img :src="getStrapiMedia(item.icon.url)" :alt="item.icon.alternativeText">
                     </a>
                 </li>
             </ul>
@@ -47,9 +47,7 @@ export default {
         }
     },
     methods: {
-        strapiSrc: function(img) {
-            return getStrapiMedia(img);
-        }
+        getStrapiMedia
     }
 }
 </script>
