@@ -1,36 +1,44 @@
 // Classes that are added into body tag to control background and other styles
 .pageLayout {
-    transition: background-color 0.5s;
+    transition: background-color 0.6s 0.2s;
 
     &--white {
+        @extend .pageLayout;
         background-color: $color_white;
     }
 
     &--gray {
+        @extend .pageLayout;
         background-color: $color_gray;
     }
 
     &--caribbean {
+        @extend .pageLayout;
         background-color: $color_caribbean;
     }
 
     &--blue {
+        @extend .pageLayout;
         background-color: $color_blue;
     }
 
     &--bluemarine {
+        @extend .pageLayout;
         background-color: $color_bluemarine;
     }
 
     &--pink {
+        @extend .pageLayout;
         background-color: $color_pink;
     }
 
     &--yellow {
+        @extend .pageLayout;
         background-color: $color_yellow;
     }
 
     &--orange {
+        @extend .pageLayout;
         background-color: $color_orange;
     }
 }
