@@ -43,7 +43,7 @@
     @extend .text--regular;
     margin-left: rem(27px);
 
-    .ns-card--orange &, .ns-card--bluemarine &, .ns-card--blue & {
+    #{$pageLayoutInvertedColorSelector}{ 
       color: $color_white;
     }
   }
