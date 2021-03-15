@@ -53,6 +53,13 @@ export default {
   },
   methods: {
     getStrapiMedia
+  },
+  head() {
+      return {
+          bodyAttrs: {
+              class: 'pageLayout--yellow'
+          }
+      }
   }
 }
 </script>

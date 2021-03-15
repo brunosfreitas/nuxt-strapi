@@ -1,0 +1,44 @@
+// Classes that are added into body tag to control background and other styles
+.pageLayout {
+    transition: background-color 0.5s;
+
+    &--white {
+        background-color: $color_white;
+    }
+
+    &--gray {
+        background-color: $color_gray;
+    }
+
+    &--caribbean {
+        background-color: $color_caribbean;
+    }
+
+    &--blue {
+        background-color: $color_blue;
+    }
+
+    &--bluemarine {
+        background-color: $color_bluemarine;
+    }
+
+    &--pink {
+        background-color: $color_pink;
+    }
+
+    &--yellow {
+        background-color: $color_yellow;
+    }
+
+    &--orange {
+        background-color: $color_orange;
+    }
+}
+
+$pageLayoutInvertedColorSelector: ".pageLayout--orange &, .pageLayout--bluemarine &, .pageLayout--blue &";
+// WIP - Helper for selecting all negativeBackground selectors
+// USAGE 
+// 
+// #{$pageLayoutInvertedColorSelector}{
+//     font-size: 14px;
+// }

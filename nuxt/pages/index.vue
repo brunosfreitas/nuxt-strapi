@@ -2,7 +2,7 @@
   <div class="home">
     <div class="container">
       <div class="home__cover">
-        <h2 class="home__heading">{{home.heading}}</h2>
+        <h1 class="home__heading">{{home.heading}}</h1>
         <p class="home__description">{{home.description}}</p>
       </div>
 
@@ -25,6 +25,13 @@ export default {
       articles: await $strapi.$articles.find(),
       home: await $strapi.$home.find(),
     };
+  },
+  head() {
+      return {
+          bodyAttrs: {
+              class: 'pageLayout--caribbean'
+          }
+      }
   }
 }
 </script>

@@ -1,0 +1,71 @@
+.article{
+  padding: 140px 0px;
+  width: 100%;
+  min-height: 100vh;
+  // background-color: $color_yellow;
+
+  &__backButton {
+    @extend .text--bold, .text--big;
+    text-decoration: none;
+    display: inline-block;
+
+    &:before {
+      content: "< "
+    }
+
+    #{$pageLayoutInvertedColorSelector}{ 
+      color: $color_white;
+      transition: color 0.3s;
+    }
+  }
+
+  &__title {
+    @extend .heading--three;
+    margin: rem(40px) 0;
+    text-align: left;
+
+    #{$pageLayoutInvertedColorSelector}{ 
+      color: $color_white;
+      transition: color 0.3s;
+    }
+  }
+
+  &__content {
+    @extend .text--big;
+    // color: $color_gray;
+
+    #{$pageLayoutInvertedColorSelector}{
+      color: $color_white;
+      transition: color 0.3s;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: rem(70px);
+    grid-template-columns: 1fr;
+
+    @media (min-width: $tablet-min) {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  &__informs {
+    @extend .text--big, .text--bold;
+    display: flex;
+    padding-top: rem(20px);
+    justify-content: space-between;
+    width: 25%;
+    color: $color_black;
+
+    #{$pageLayoutInvertedColorSelector}{ 
+      color: $color_white;
+      transition: color 0.3s;
+    }
+  }
+}

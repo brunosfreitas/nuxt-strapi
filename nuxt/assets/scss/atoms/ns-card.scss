@@ -1,12 +1,9 @@
 .ns-card {
-  width: 100%;
-  max-width: 380px;
   border: 1px solid transparent;
   border-image-slice: 92;
   border-image-width: 82px;
-  margin: 15px;
   flex: 1;
-
+  
   &--white {
     border-image-source: url('../img/card-mask-white.png');
   }
@@ -17,18 +14,10 @@
 
   &--blue {
     border-image-source: url('../img/card-mask-blue.png');
-
-    .ns-card__title {
-      color: $color_white;
-    }
   }
 
   &--bluemarine {
     border-image-source: url('../img/card-mask-blue-marine.png');
-
-    .ns-card__title {
-      color: $color_white;
-    }
   }
 
   &--pink {
@@ -41,10 +30,6 @@
 
   &--orange {
     border-image-source: url('../img/card-mask-orange.png');
-
-    .ns-card__title {
-      color: $color_white;
-    }
   }
 
   &__link {
@@ -55,13 +40,11 @@
   }
 
   &__title {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 27px;
-    text-align: left;
-    color: $color_black;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    letter-spacing: .5px;
+    @extend .text--regular;
+    margin-left: rem(27px);
+
+    .ns-card--orange &, .ns-card--bluemarine &, .ns-card--blue & {
+      color: $color_white;
+    }
   }
 }

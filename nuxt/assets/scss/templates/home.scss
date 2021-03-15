@@ -2,37 +2,24 @@
   padding: 140px 0px;
   width: 100%;
   min-height: 100vh;
-  background-color: $color_caribbean;
 
   &__cover {
-    max-width: 55%;
-    margin: 0 auto;
-    padding-bottom: 80px;
+    max-width: 100%;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet-min) {
+      max-width: 55%;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
   }
 
   &__heading {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 70px;
-    line-height: 75px;
-    letter-spacing: 2px;
-    letter-spacing: 2px;
-    text-align: center;
-    color: $color_black;
-    margin-bottom: 30px;
+    @extend .heading--one;
   }
 
   &__description {
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: .45px;
+    @extend .text--big;
     text-align: center;
-    color: $color_black;
-  }
-
-  @media (max-width: $mobile-max) {
-    &__cover {
-      max-width: 100%;
-      padding-bottom: 40px;
-    }
   }
 }

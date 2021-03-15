@@ -1,29 +1,50 @@
 <template>
-    <div class="container">
+    <div class="article">
         <div v-if="error">
             {{ error }}
         </div>
 
-        <article v-else class="ns-article">
-            <NuxtLink to="/" class="ns-article__backButton"> Back </NuxtLink>
+        <article v-else class="container">
+            <NuxtLink to="/" class="article__backButton"> Back </NuxtLink>
 
-            <h1 class="ns-article__title">{{article.title}}</h1>
-            <p v-html="article.content" class="ns-article__content"></p>
+            <h1 class="article__title">{{article.title}}</h1>
+            <div class="article__wrapper">
+                <div class="article__wrapper--left">
+                    <img class="article__thumbnail" :alt="imgAlt" :src="imgSrc">
+                </div>
 
-            <div class="ns-article__informs">
-                <p>{{ article.publish_at }}</p>
-                <p>{{ article.likes }}</p>
+                <div class="article__wrapper--right">
+                    <p v-html="article.content" class="article__content"></p>
+
+                    <div class="article__informs">
+                        <p>{{ article.publish_at }}</p>
+                    </div>
+                </div>
             </div>
         </article>
     </div>
 </template>
 
 <script>
+
+import { getStrapiMedia } from '../../utils/medias.js';
+
 export default {
     data () {
         return {
             article: [],
             error: null
+        }
+    },
+    methods: {
+        getStrapiMedia
+    },
+    computed: {
+        imgSrc: function() {
+            return getStrapiMedia(this.article.thumbnail?.url)
+        },
+        imgAlt: function() {
+            return this.article.thumbnail?.imageAlternative;
         }
     },
     async fetch() {
@@ -39,6 +60,13 @@ export default {
     async asyncData({ params }) {
         const slug = params.slug // When calling /abc the slug will be "abc"
         return { slug }
+    },
+    head() {
+        return {
+            bodyAttrs: {
+                class: this.article.BackgroundColor ? `pageLayout--${this.article.BackgroundColor}`: 'pageLayout'
+            }
+        }
     }
 }
 </script>
