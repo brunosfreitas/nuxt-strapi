@@ -2,8 +2,27 @@
   width: 100%;
 
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+    gap: 20px;
+
+    @media (min-width: $tablet-min) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-min) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0;
+    }
+
+    &--animation-enter-active, &--animation-leave-active {
+      transition: all 0.6s;
+    }
+
+    &--animation-enter, &--animation-leave-to {
+      opacity: 0;
+    }
   }
 
   &__search {

@@ -1,78 +1,67 @@
 .heading {
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-  
-    &-one {
-      color: #00b728;
-      font-size: 34px;
-      line-height: 41px;
-  
-      @media (min-width: $desktop-min) {
-        font-size: 46px;
-        line-height: 52px;
-      }
+    &--one {
+      font-family: 'Permanent Marker', cursive;
+      font-size: rem(70px);
+      line-height: rem(75px);
+      letter-spacing: rem(2px);
+      text-align: center;
+      color: $color_black;
+      margin-bottom: rem(30px);
     }
   
-    &-two {
-      color: #00b728;
-      font-size: 30px;
-      line-height: 37px;
-  
-      @media (min-width: $desktop-min) {
-        font-size: 38px;
-        line-height: 46px;
-      }
+    &--two {
+      @extend .heading--one;
+      font-size: rem(50px);
+      line-height: rem(55px);
+      letter-spacing: rem(2px);
+      margin-bottom: rem(20px);
     }
   
-    &-three {
-      color: #00b728;
-      font-size: 26px;
-      line-height: 31px;
-  
-      @media (min-width: $desktop-min) {
-        font-size: 32px;
-        line-height: 38px;
-      }
+    &--three {
+      @extend .heading--one;
+      font-size: rem(30px);
+      line-height: rem(45px);
+      letter-spacing: rem(2px);
+      margin-bottom: rem(20px);
     }
   }
   
   .text {
-    font-family: 'Arial', sans-serif;
-  
-    &--small {
-      color: #000000;
-      font-size: 12px;
+
+    &--regular {
+      font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      line-height: 18px;
+      font-size: rem(16px);
+      line-height: rem(27px);
+      letter-spacing: rem(.45px);
+      text-align: left;
+      color: $color_black;
     }
   
-    &--regular {
-      color: #000000;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 22px;
+    &--small {
+      @extend .text--regular;
+      font-size: rem(14px);
+      line-height: rem(20px);
+    }
+
+    &--big {
+      @extend .text--regular;
+      font-size: rem(18px);
+      line-height: rem(24px);
     }
   
     &--semiBold {
-      color: #000000;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 22px;
+      @extend .text--regular;
+      font-weight: 500;
     }
   
     &--bold {
-      color: #000000;
-      font-size: 18px;
+      @extend .text--regular;
       font-weight: 700;
-      line-height: 18px;
     }
   
     &--white {
-      color: #ffffff;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 29px;
-      text-align: center;
+      @extend .text--regular;
+      color: $color_white;
     }
-  }
-  
+}

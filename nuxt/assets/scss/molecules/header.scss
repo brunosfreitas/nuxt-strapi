@@ -30,16 +30,12 @@
   }
 
   &__list-item {
-    font-family: 'Montserrat', sans-serif;
+    @extend .text--bold, .text--big;
     text-decoration: none;
-    font-size: 17px;
-    line-height: 21px;
-    letter-spacing: .5px;
-    font-weight: 700;
-    transition: .2s ease-in-out;
+    transition: color .2s ease-in-out;
 
-    &:hover {
-      opacity: .8;
+    #{$pageLayoutInvertedColorSelector}{
+      color: $color_white;
     }
   }
 

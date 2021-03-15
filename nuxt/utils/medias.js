@@ -1,5 +1,8 @@
 // https://github.com/strapi/strapi-starter-nuxt-blog/blob/master/frontend/utils/medias.js
 export function getStrapiMedia(url) {
+    if(url === undefined) {
+      return '';
+    }
     // Check if URL is a local path
     if (url.startsWith("/")) {
       // Prepend Strapi address

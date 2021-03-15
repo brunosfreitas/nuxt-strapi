@@ -6,10 +6,11 @@
       type="text"
       v-model="searchArticleText">
 
-    <div class="ns-cardList__wrapper">
+    <transition-group tag="div" class="ns-cardList__wrapper" name="ns-cardList__wrapper--animation">
       <ns-card
         v-for="article in filteredArticles"
-        :key="article.id" :link="article.slug"
+        :key="article.id" 
+        :link="article.slug"
         :title="article.title"
         :imgSrc="article.thumbnail.url"
         :bgColor="article.BackgroundColor"
@@ -18,7 +19,7 @@
         <span class="ns-cardList__message" v-if="filteredArticles.length <= 0">
           Oops. No articles found!
         </span>
-    </div>
+    </transition-group>
   </div>
 </template>
 

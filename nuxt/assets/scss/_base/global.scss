@@ -12,18 +12,25 @@ html {
   width: 100%;
   height: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: $html-font-size;
   margin: 0;
   color: $color_black;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: inherit;
+  color: inherit;  
+  transition: color 0.5s;
 
-  &:hover {
-    color: inherit;
+  &:hover, &:focus {
+    color: $color_blue;
   }
+}
+
+*:focus {
+  outline-offset: rem(5px);
+  outline-width: rem(3px);
+  outline-color: $color_blue;
 }
 
 ::selection {
