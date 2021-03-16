@@ -13,7 +13,7 @@
         :link="article.slug"
         :title="article.title"
         :imgSrc="article.thumbnail.url"
-        :bgColor="article.BackgroundColor"
+        :bgColor="article.background_color"
         :imgAlt="article.thumbnail.alternativeText" />
 
         <span class="ns-cardList__message" v-if="filteredArticles.length <= 0">
