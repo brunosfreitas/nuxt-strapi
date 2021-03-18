@@ -64,7 +64,7 @@ export default {
     head() {
         return {
             bodyAttrs: {
-                class: this.article.BackgroundColor ? `pageLayout--${this.article.BackgroundColor}`: 'pageLayout'
+                class: this.article.background_color ? `pageLayout--${this.article.background_color}`: 'pageLayout'
             }
         }
     }

@@ -1,9 +1,9 @@
 <template>
-  <a
-    :href="url"
+  <NuxtLink
+    :to="url"
     :class="['ns-button',`ns-button--${bgColor}`]">
       {{ label }}
-  </a>
+  </NuxtLink>
 </template>
 
 <script>
@@ -11,7 +11,8 @@ export default {
   name: 'ns-button',
   props: {
     url: {
-      type: String
+      type: String,
+      default: '/'
     },
     label: {
       type: String
