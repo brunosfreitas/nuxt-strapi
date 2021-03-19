@@ -1,24 +1,20 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: []
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,7 +36,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/strapi'],
   strapi: {
-    entities: ['heroes', 'articles', 'contact', 'home' ,'header'],
+    entities: ['heroes', 'articles', 'contact', 'home' ,'header', 'global'],
     url: 'http://localhost:1337'
   },
 
