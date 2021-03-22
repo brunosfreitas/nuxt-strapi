@@ -7,7 +7,7 @@
 
       <nav v-else  class="header__nav">
         <div class="header__left-nav">
-          <Logo class="header__brand" />
+          <atoms-logo class="header__brand" />
 
           <ul class="header__list">
             <li v-for="field in header.header_links" :key="field.id">
@@ -18,7 +18,7 @@
           </ul>
         </div>
 
-        <ns-button
+        <atoms-ns-button
           class="header__button"
           :url="header.cta_url"
           :label="header.cta_label"

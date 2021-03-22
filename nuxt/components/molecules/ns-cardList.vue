@@ -7,9 +7,9 @@
       v-model="searchArticleText">
 
     <transition-group tag="div" class="ns-cardList__wrapper" name="ns-cardList__wrapper--animation">
-      <ns-card
+      <atoms-ns-card
         v-for="article in filteredArticles"
-        :key="article.id" 
+        :key="article.id"
         :link="article.slug"
         :title="article.title"
         :imgSrc="article.thumbnail.url"
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'ns-hero',
+  name: 'ns-card-list',
   data () {
     return {
       searchArticleText: ''
