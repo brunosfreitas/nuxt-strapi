@@ -1,11 +1,7 @@
 <template>
   <div class="contact">
     <div class="container">
-      <div v-if="error">
-        {{ error }}
-      </div>
-
-      <div v-else class="contact__column">
+      <div class="contact__column">
         <h2 class="contact__title">{{ contact.title }}</h2>
         <p class="contact__text">{{ contact.description }}</p>
 
@@ -34,35 +30,46 @@
 </template>
 
 <script>
-import { getStrapiMedia } from '../../utils/medias.js';
+import { getStrapiMedia } from '@/utils/medias.js';
+import { getMetaTags } from '@/utils/seo.js';
 
 export default {
   name: 'contact',
-  data () {
+  async asyncData({ $strapi }) {
     return {
-      contact: [],
-      error: null
-    }
-  },
-  async fetch() {
-    try {
-      this.contact = await this.$strapi.$contact.find()
-    } catch (error) {
-      this.error = error
-    }
+      contact: await $strapi.$contact.find(),
+      global: await $strapi.$global.find()
+    };
   },
   methods: {
     getStrapiMedia
   },
   head() {
-      return {
-          bodyAttrs: {
-              class: 'pageLayout--yellow'
-          }
+    const { seo } = this.contact;
+    const { defaultSeo, favicon, siteName } = this.global;
+
+    const fullSeo = {
+      ...defaultSeo,
+      ...seo
+    };
+
+    return {
+      titleTemplate: `%s | ${siteName}`,
+      title: fullSeo.metaTitle,
+      meta: getMetaTags(fullSeo),
+      link: [
+        {
+          rel: "favicon",
+          href: getStrapiMedia(favicon.url),
+        },
+      ],
+      bodyAttrs: {
+        class: 'pageLayout--yellow'
       }
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 </style>
