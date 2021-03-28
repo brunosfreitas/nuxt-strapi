@@ -4,16 +4,16 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 20px;
+    margin: 0 auto;
     gap: 20px;
 
     @media (min-width: $tablet-min) {
+      margin: 0 20px;
       grid-template-columns: 1fr 1fr;
     }
 
     @media (min-width: $desktop-min) {
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 0;
     }
 
     &--animation-enter-active, &--animation-leave-active {

@@ -5,7 +5,7 @@
         <h2 class="contact__title">{{ contact.title }}</h2>
         <p class="contact__text">{{ contact.description }}</p>
 
-        <ns-button
+        <atoms-ns-button
           class="contact__button "
           :url="contact.button_link"
           :label="contact.button_label "
@@ -23,7 +23,7 @@
       </div>
 
       <div class="contact__column">
-        <employee-card-list />
+        <molecules-employee-card-list />
       </div>
     </div>
   </div>

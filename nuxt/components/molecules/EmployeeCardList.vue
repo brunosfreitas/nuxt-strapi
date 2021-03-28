@@ -5,7 +5,7 @@
     </div>
 
     <template v-else>
-      <employee-card
+      <atoms-employee-card
         v-for="field in contact.employees"
         :key="field.id"
         :name="field.employee_name"

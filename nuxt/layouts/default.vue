@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <molecules-header/>
     <Nuxt />
   </div>
 </template>
