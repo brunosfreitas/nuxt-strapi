@@ -1,7 +1,7 @@
 <template>
   <div>
-    <molecules-header/>
-    <Nuxt />
+    <molecules-header></molecules-header>
+    <Nuxt/>
   </div>
 </template>
 

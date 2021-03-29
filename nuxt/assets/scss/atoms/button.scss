@@ -1,22 +1,32 @@
-.button {
+.button{
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  font-size: 17px;
+  font-weight: 900;
+  width: 170px;
+  height: 52px;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  border: 5px solid transparent;
+  border-image-slice: 34;
+  border-image-width: 34px;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &--white {
+    border-image-source: url('../img/button-mask-white.png');
+  }
+
+  &--bluemarine {
+    border-image-source: url('../img/button-mask-blue-marine.png');
     color: $color_white;
-    background-color: $color_blue_light;
-    border-radius: 10px;
-    border: 1px solid $color_black;
-    box-shadow: 0px 4px 0px $color_black;
-    max-height: 52px;
-    max-width: 189px;
-    padding: 15px 20px;
-    letter-spacing: .40px;
-    text-align: center;
-    font-weight: 900;
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    transition: .2s ease-in-out;
 
     &:hover {
-        color: $color_white;
-        opacity: .9;
+      color: $color_white;
     }
+  }
 }

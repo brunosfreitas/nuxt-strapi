@@ -1,4 +1,4 @@
-.ns-card {
+.card {
   border: 1px solid transparent;
   border-image-slice: 92;
   border-image-width: 82px;
@@ -43,7 +43,7 @@
     @extend .text--regular;
     margin-left: rem(27px);
 
-    #{$pageLayoutInvertedColorSelector}{ 
+    .card--orange &, .card--bluemarine &, .card--blue &{
       color: $color_white;
     }
   }

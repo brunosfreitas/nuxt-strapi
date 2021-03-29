@@ -6,7 +6,7 @@
         <p class="home__description">{{home.description}}</p>
       </div>
 
-      <molecules-ns-card-list :articles="articles"></molecules-ns-card-list>
+      <molecules-card-list :articles="articles"></molecules-card-list>
     </div>
   </div>
 </template>

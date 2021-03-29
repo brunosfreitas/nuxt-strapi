@@ -1,8 +1,8 @@
 <template>
-    <article :class="['ns-card',`ns-card--${bgColor}`]">
-        <NuxtLink :to="nuxtURL" class="ns-card__link">
-            <img class="ns-card__thumbnail" :alt="imgAlt" :src="getStrapiMedia(imgSrc)">
-            <h2 class="ns-card__title">{{ title }}</h2>
+    <article :class="['card',`card--${bgColor}`]">
+        <NuxtLink :to="nuxtURL" class="card__link">
+            <img class="card__thumbnail" :alt="imgAlt" :src="getStrapiMedia(imgSrc)">
+            <h2 class="card__title">{{ title }}</h2>
         </NuxtLink>
     </article>
 </template>
@@ -11,7 +11,7 @@
 import { getStrapiMedia } from '../../utils/medias.js';
 
 export default {
-    name: "ns-card",
+    name: "atoms-card",
     props: {
         imgAlt: {
             type: String,

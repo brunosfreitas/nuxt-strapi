@@ -18,7 +18,7 @@
           </ul>
         </div>
 
-        <atoms-ns-button
+        <atoms-button
           class="header__button"
           :url="header.cta_url"
           :label="header.cta_label"
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'molecules-header',
   data () {
     return {
       header: [],

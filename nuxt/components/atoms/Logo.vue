@@ -8,7 +8,7 @@
 import { getStrapiMedia } from '../../utils/medias.js';
 
 export default {
-  name: 'Logo',
+  name: 'atoms-logo',
   props: {
     imgSrc: {
       type: String,

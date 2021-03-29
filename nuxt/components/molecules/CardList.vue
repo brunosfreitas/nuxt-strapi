@@ -1,13 +1,13 @@
 <template>
-  <div class="ns-cardList">
+  <div class="card-list">
     <input
-      class="ns-cardList__search"
+      class="card-list__search"
       placeholder="Ok, let's go..."
       type="text"
       v-model="searchArticleText">
 
-    <transition-group tag="div" class="ns-cardList__wrapper" name="ns-cardList__wrapper--animation">
-      <atoms-ns-card
+    <transition-group tag="div" class="card-list__wrapper" name="card-list__wrapper--animation">
+      <atoms-card
         v-for="article in filteredArticles"
         :key="article.id"
         :link="article.slug"
@@ -16,7 +16,7 @@
         :bgColor="article.background_color"
         :imgAlt="article.thumbnail.alternativeText" />
 
-        <span class="ns-cardList__message" v-if="filteredArticles.length <= 0">
+        <span class="card-list__message" v-if="filteredArticles.length <= 0">
           Oops. No articles found!
         </span>
     </transition-group>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'ns-card-list',
+  name: "molecules-card-list",
   data () {
     return {
       searchArticleText: ''

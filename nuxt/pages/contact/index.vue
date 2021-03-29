@@ -5,7 +5,7 @@
         <h2 class="contact__title">{{ contact.title }}</h2>
         <p class="contact__text">{{ contact.description }}</p>
 
-        <atoms-ns-button
+        <atoms-button
           class="contact__button "
           :url="contact.button_link"
           :label="contact.button_label "

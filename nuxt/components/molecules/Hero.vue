@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'ns-hero',
+  name: 'molecules-hero',
   data () {
     return {
       articles: [],

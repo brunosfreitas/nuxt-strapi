@@ -20,7 +20,7 @@
 import { getStrapiMedia } from '../../utils/medias.js';
 
 export default {
-    name: "EmployeeCard",
+    name: "atoms-employee-card",
     props: {
         name: {
             type: String,
