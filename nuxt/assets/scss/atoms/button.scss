@@ -18,11 +18,11 @@
   }
 
   &--white {
-    border-image-source: url('../img/button-mask-white.png');
+    border-image-source: url('~assets/img/button-mask-white.png');
   }
 
   &--bluemarine {
-    border-image-source: url('../img/button-mask-blue-marine.png');
+    border-image-source: url('~assets/img/button-mask-blue-marine.png');
     color: $color_white;
 
     &:hover {
