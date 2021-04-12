@@ -1,0 +1,50 @@
+.card {
+  border: 1px solid transparent;
+  border-image-slice: 92;
+  border-image-width: 82px;
+  flex: 1;
+  
+  &--white {
+    border-image-source: url('~assets/img/card-mask-white.png');
+  }
+
+  &--gray {
+    border-image-source: url('~assets/img/card-mask-gray.png');
+  }
+
+  &--blue {
+    border-image-source: url('~assets/img/card-mask-blue.png');
+  }
+
+  &--bluemarine {
+    border-image-source: url('~assets/img/card-mask-blue-marine.png');
+  }
+
+  &--pink {
+    border-image-source: url('~assets/img/card-mask-pink.png');
+  }
+
+  &--yellow {
+    border-image-source: url('~assets/img/card-mask-yellow.png');
+  }
+
+  &--orange {
+    border-image-source: url('~assets/img/card-mask-orange.png');
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+
+  &__title {
+    @extend .text--regular;
+    margin-left: rem(27px);
+
+    .card--orange &, .card--bluemarine &, .card--blue &{
+      color: $color_white;
+    }
+  }
+}

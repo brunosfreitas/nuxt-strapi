@@ -27,7 +27,12 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components:  [
+    '~/components', // shortcut to { path: '~/components' }
+    { path: '~/components/atoms/', prefix: 'atoms' },
+    { path: '~/components/molecules/', prefix: 'molecules' },
+    { path: '~/components/organisms/', prefix: 'organisms' }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

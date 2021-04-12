@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'EmployeeCardList',
+  name: 'molecules-employee-card-list',
   data () {
     return {
       contact: [],

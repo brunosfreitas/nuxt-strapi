@@ -1,14 +1,14 @@
 <template>
   <NuxtLink
     :to="url"
-    :class="['ns-button',`ns-button--${bgColor}`]">
+    :class="['button',`button--${bgColor}`]">
       {{ label }}
   </NuxtLink>
 </template>
 
 <script>
 export default {
-  name: 'ns-button',
+  name: 'attoms-button',
   props: {
     url: {
       type: String,

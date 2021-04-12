@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/">
-    <img class="NuxtLogo" src="@/assets/img/logo.png" alt="Logo">
+    <img class="NuxtLogo" src="~/assets/img/logo.png" alt="Logo">
   </NuxtLink>
 </template>
 
@@ -8,7 +8,7 @@
 import { getStrapiMedia } from '../../utils/medias.js';
 
 export default {
-  name: 'Logo',
+  name: 'atoms-logo',
   props: {
     imgSrc: {
       type: String,
